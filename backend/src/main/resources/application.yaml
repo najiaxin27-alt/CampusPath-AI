@@ -13,3 +13,14 @@ spring:
           temperature: 0.2
       embedding:
         model: bge-m3:latest
+    vectorstore:
+      milvus:
+        client:
+          host: localhost
+          port: 19530
+        database-name: default
+        collection-name: campus_knowledge
+        initialize-schema: true
+        embedding-dimension: 1024
+        index-type: IVF_FLAT
+        metric-type: COSINE
